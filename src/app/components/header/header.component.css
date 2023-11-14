@@ -1,0 +1,93 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #000;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header h1 {
+  color: #f7931a;
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav a {
+  margin: .4em;
+  color: #f7931a;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  transition: .3s;
+  cursor: pointer;
+}
+
+header nav a:hover {
+  color: white;
+}
+
+.toggle-button, .close-button {
+  display: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #f7931a;
+  background: none;
+  border: none;
+}
+
+@media (max-width: 800px) {
+  header {
+    align-items: center;
+  }
+
+  header nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    right: 0;
+    background-color: #000;
+    padding: .2em;
+  }
+
+  header nav a {
+    margin: .4em;
+  }
+
+  header.show-nav nav {
+    display: flex;
+  }
+
+  header.show-nav .close-button {
+    display: block;
+  }
+
+  header.show-nav .toggle-button {
+    display: none;
+  }
+
+  header:not(.show-nav) .toggle-button {
+    display: block;
+  }
+
+  header:not(.show-nav) .close-button {
+    display: none;
+  }
+}
