@@ -17,7 +17,7 @@ header {
 }
 
 header h1 {
-  color: #f7931a;
+  color: var(--accent-color);
   margin: 0;
 }
 
@@ -28,7 +28,7 @@ header nav {
 
 header nav a {
   margin: .4em;
-  color: #f7931a;
+  color: var(--accent-color);
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
@@ -45,7 +45,7 @@ header nav a:hover {
   display: none;
   cursor: pointer;
   font-size: 20px;
-  color: #f7931a;
+  color: var(--accent-color);
   background: none;
   border: none;
 }
